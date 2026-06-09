@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jan Ira Bantilan | Portfolio</title>
     <style>
-        /* Exact Styling Inspired by Gary Sheng's Portfolio */
+        /* Exact Styling Match for Gary Sheng's Portfolio */
         :root {
             --bg-color: #ffffff;
-            --text-dark: #111111;
+            --text-dark: #000000;
             --text-muted: #555555;
             --border-color: #000000;
-            --tag-bg: #222222;
+            --tag-bg: #000000;
         }
 
         * {
@@ -24,174 +24,187 @@
             color: var(--text-dark);
             margin: 0;
             padding: 0;
-            line-height: 1.5;
+            line-height: 1.6;
         }
 
         /* Two-Column Grid Layout */
         .container {
             display: grid;
-            grid-template-columns: 320px 1fr;
+            grid-template-columns: 340px 1fr;
             min-height: 100vh;
         }
 
-        /* Left Sidebar Fixation */
+        /* Left Sidebar - Gary style */
         .sidebar {
-            padding: 60px 40px;
-            border-right: 1px solid #eee;
-            background-color: #fafafa;
+            padding: 80px 45px;
+            border-right: 1px solid #eaeaea;
+            background-color: #ffffff;
+            position: sticky;
+            top: 0;
+            height: 100vh;
         }
 
         .profile-name {
             font-family: Georgia, serif;
-            font-size: 2.2rem;
+            font-size: 2.4rem;
             font-weight: 700;
             line-height: 1.1;
-            margin-bottom: 5px;
+            margin-bottom: 8px;
+            letter-spacing: -0.5px;
         }
 
         .profile-title {
-            font-size: 1rem;
+            font-size: 0.95rem;
             text-transform: uppercase;
             letter-spacing: 2px;
             color: var(--text-muted);
             font-weight: 600;
-            margin-bottom: 30px;
+            margin-bottom: 40px;
         }
 
         .contact-info {
-            font-size: 0.9rem;
-            color: var(--text-muted);
+            font-size: 0.95rem;
+            color: var(--text-dark);
+            line-height: 1.8;
         }
 
         .contact-info p {
-            margin: 10px 0;
+            margin: 12px 0;
         }
 
         .contact-info a {
             color: var(--text-dark);
             text-decoration: none;
-            border-bottom: 1px solid #ccc;
+            border-bottom: 1px solid #111111;
         }
 
         .contact-info a:hover {
-            border-bottom-color: var(--text-dark);
+            color: #555555;
+            border-bottom-color: #555555;
         }
 
         /* Right Content Area */
         .main-content {
-            padding: 60px 60px 60px 80px;
-            max-width: 900px;
+            padding: 80px 80px 80px 100px;
+            max-width: 960px;
         }
 
-        /* Gary's Big Intro Text */
+        /* Gary's Distinct Bold Intro Text */
         .intro-paragraph {
-            font-size: 1.4rem;
-            line-height: 1.45;
+            font-size: 1.45rem;
+            line-height: 1.5;
             font-weight: 400;
             color: var(--text-dark);
-            margin-bottom: 50px;
+            margin-bottom: 60px;
+            letter-spacing: -0.2px;
         }
 
         /* Section Headings */
         section {
-            margin-bottom: 50px;
+            margin-bottom: 60px;
         }
 
         h2 {
             font-family: Georgia, serif;
-            font-size: 1.4rem;
+            font-size: 1.3rem;
             font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 1.5px;
             border-bottom: 2px solid var(--border-color);
-            padding-bottom: 5px;
-            margin-bottom: 25px;
+            padding-bottom: 6px;
+            margin-bottom: 30px;
             margin-top: 0;
         }
 
         /* Experience Item Block */
         .exp-item {
-            margin-bottom: 35px;
+            margin-bottom: 40px;
         }
 
         .exp-header {
             display: flex;
             justify-content: space-between;
             align-items: baseline;
-            margin-bottom: 5px;
+            margin-bottom: 4px;
         }
 
         .exp-role {
-            font-size: 1.15rem;
+            font-size: 1.2rem;
             font-weight: 700;
+            color: var(--text-dark);
         }
 
         .exp-date {
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             color: var(--text-muted);
             font-weight: 500;
         }
 
         .exp-company {
-            font-size: 1rem;
+            font-size: 1.05rem;
             font-weight: 600;
             color: var(--text-muted);
-            margin-bottom: 10px;
+            margin-bottom: 12px;
         }
 
         ul {
             margin: 0;
             padding-left: 20px;
-            color: var(--text-muted);
+            color: #222222;
         }
 
         li {
-            margin-bottom: 8px;
-            font-size: 0.95rem;
+            margin-bottom: 10px;
+            font-size: 1rem;
         }
 
-        /* Gary Sheng's Square Dark Skill Tags */
+        /* Gary Sheng's Minimalist Dark Square Skill Tags */
         .tags-grid {
             display: flex;
             flex-wrap: wrap;
-            gap: 8px;
+            gap: 10px;
         }
 
         .tag {
             background-color: var(--tag-bg);
             color: #ffffff;
-            padding: 6px 12px;
-            font-size: 0.85rem;
+            padding: 8px 14px;
+            font-size: 0.8rem;
             font-weight: 600;
-            letter-spacing: 0.5px;
+            letter-spacing: 0.8px;
             text-transform: uppercase;
+            border-radius: 0px; /* Square edges just like Gary's site */
         }
 
         footer {
-            margin-top: 60px;
-            font-size: 0.8rem;
+            margin-top: 80px;
+            border-top: 1px solid #eaeaea;
+            padding-top: 20px;
+            font-size: 0.9rem;
             color: var(--text-muted);
         }
 
-        /* Responsive View for Mobile Phones */
+        /* Mobile View Changes */
         @media (max-width: 768px) {
             .container {
                 grid-template-columns: 1fr;
             }
             .sidebar {
+                position: relative;
+                height: auto;
                 border-right: none;
-                border-bottom: 1px solid #eee;
-                padding: 40px 20px;
+                border-bottom: 1px solid #eaeaea;
+                padding: 50px 30px;
             }
             .main-content {
-                padding: 40px 20px;
+                padding: 50px 30px;
             }
             .exp-header {
                 flex-direction: column;
             }
             .exp-date {
-                margin-top: 2px;
-                margin-bottom: 5px;
+                margin-top: 4px;
+                margin-bottom: 6px;
             }
         }
     </style>
@@ -216,7 +229,7 @@
         <main class="main-content">
             
             <p class="intro-paragraph">
-                I am a highly proactive and organized Virtual Assistant with a strong sense of responsibility and exceptional interpersonal skills. Known for my ability to thrive in a collaborative work environment, make swift decisions, and effectively manage high-pressure situations. I am eager to excel in a challenging role while continuously expanding my skill set.
+                I am a highly proactive and organized Virtual Assistant with a strong sense of responsibility and exceptional interpersonal skills. Known for my ability to thrive in a collaborative work environment, make swift decisions, and effectively manage high-pressure situations. I am eager to excel in a challenging role while continuously expanding my skill set[cite: 1].
             </p>
 
             <!-- Section: Work Experience -->
@@ -230,11 +243,11 @@
                     </div>
                     <div class="exp-company">Freelance / Real Estate Support</div>
                     <ul>
-                        <li>Conducted outbound cold calls to homeowners across targeted regions to identify potential sellers and generate qualified leads for a real estate agent.</li>
-                        <li>Built and maintained a consistent sales pipeline by engaging prospects, handling objections, and securing interest for follow-up.</li>
-                        <li>Researched and gathered lead information from online platforms such as Zillow, Realtor.com, Redfin, and property databases to identify new opportunities.</li>
-                        <li>Accurately logged prospect data, property details, and conversation outcomes into CRM systems for streamlined follow-up and reporting.</li>
-                        <li>Supported the realtor in optimizing lead conversion by providing well-organized, pre-qualified prospects.</li>
+                        <li>Conducted outbound cold calls to homeowners across targeted regions to identify potential sellers and generate qualified leads for a real estate agent[cite: 1].</li>
+                        <li>Built and maintained a consistent sales pipeline by engaging prospects, handling objections, and securing interest for follow-up[cite: 1].</li>
+                        <li>Researched and gathered lead information from online platforms such as Zillow, Realtor.com, Redfin, and property databases to identify new opportunities[cite: 1].</li>
+                        <li>Accurately logged prospect data, property details, and conversation outcomes into CRM systems for streamlined follow-up and reporting[cite: 1].</li>
+                        <li>Supported the realtor in optimizing lead conversion by providing well-organized, pre-qualified prospects[cite: 1].</li>
                     </ul>
                 </div>
 
@@ -245,12 +258,12 @@
                     </div>
                     <div class="exp-company">Telstra International Philippines Inc.</div>
                     <ul>
-                        <li>Provided multi-channel support, resolving inquiries and technical issues with a customer-first approach and consistently high satisfaction ratings.</li>
-                        <li>Assisted residential and business clients in transitioning to the NBN network, ensuring a smooth migration and clear understanding of service options.</li>
-                        <li>Recommended tailored upgrades and bundles based on client needs, boosting revenue and customer retention through value-based selling.</li>
-                        <li>Engaged small to mid-sized businesses via cold/warm calls, promoting Telstra services and converting leads into long-term customers.</li>
-                        <li>Handled product inquiries, provided tailored recommendations, and closed sales while aligning offers with customer needs and budgets.</li>
-                        <li>Analyzed call data to identify service pain points, contributing to improved scripts and workflows that enhanced customer and agent experience.</li>
+                        <li>Provided multi-channel support, resolving inquiries and technical issues with a customer-first approach and consistently high satisfaction ratings[cite: 1].</li>
+                        <li>Assisted residential and business clients in transitioning to the NBN network, ensuring a smooth migration and clear understanding of service options[cite: 1].</li>
+                        <li>Recommended tailored upgrades and bundles based on client needs, boosting revenue and customer retention through value-based selling[cite: 1].</li>
+                        <li>Engaged small to mid-sized businesses via cold/warm calls, promoting Telstra services and converting leads into long-term customers[cite: 1].</li>
+                        <li>Handled product inquiries, provided tailored recommendations, and closed sales while aligning offers with customer needs and budgets[cite: 1].</li>
+                        <li>Analyzed call data to identify service pain points, contributing to improved scripts and workflows that enhanced customer and agent experience[cite: 1].</li>
                     </ul>
                 </div>
 
@@ -261,9 +274,9 @@
                     </div>
                     <div class="exp-company">Authors Solutions (Xlibris)</div>
                     <ul>
-                        <li>Conducted high-volume outbound cold calls to prospective authors, initiating conversations about their writing goals and gauging their readiness to publish.</li>
-                        <li>Identified leads at various stages of the writing process and qualified them based on interest, manuscript status, and publishing intent.</li>
-                        <li>Educated authors on available publishing packages, services, and timelines to build interest and trust in Xlibris as their publishing partner.</li>
+                        <li>Conducted high-volume outbound cold calls to prospective authors, initiating conversations about their writing goals and gauging their readiness to publish[cite: 1].</li>
+                        <li>Identified leads at various stages of the writing process and qualified them based on interest, manuscript status, and publishing intent[cite: 1].</li>
+                        <li>Educated authors on available publishing packages, services, and timelines to build interest and trust in Xlibris as their publishing partner[cite: 1].</li>
                     </ul>
                 </div>
 
@@ -274,11 +287,11 @@
                     </div>
                     <div class="exp-company">TeleTech - Anthem Blue Cross Blue Shield</div>
                     <ul>
-                        <li>Handled inbound calls from healthcare providers and members, providing clear and accurate information about benefits eligibility, coverage details, and plan guidelines.</li>
-                        <li>Verified member eligibility and benefits in real-time to support medical decision-making and claims processing.</li>
-                        <li>Researched and communicated the status of medical and hospital claims, including approvals, denials, and required documentation.</li>
-                        <li>Ensured compliance with HIPAA regulations and maintained confidentiality in all member interactions.</li>
-                        <li>Resolved inquiries efficiently while maintaining empathy and professionalism, contributing to positive member satisfaction scores.</li>
+                        <li>Handled inbound calls from healthcare providers and members, providing clear and accurate information about benefits eligibility, coverage details, and plan guidelines[cite: 1].</li>
+                        <li>Verified member eligibility and benefits in real-time to support medical decision-making and claims processing[cite: 1].</li>
+                        <li>Researched and communicated the status of medical and hospital claims, including approvals, denials, and required documentation[cite: 1].</li>
+                        <li>Ensured compliance with HIPAA regulations and maintained confidentiality in all member interactions[cite: 1].</li>
+                        <li>Resolved inquiries efficiently while maintaining empathy and professionalism, contributing to positive member satisfaction scores[cite: 1].</li>
                     </ul>
                 </div>
             </section>
