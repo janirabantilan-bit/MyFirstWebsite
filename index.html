@@ -1,174 +1,388 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jan Ira Bantilan | Home</title>
-    <style>
-        :root {
-            --bg-dark: #0a1128; /* Solid dark navy background */
-            --card-light: #f4f5f7; /* Light gray rectangular card */
-            --text-dark: #1c2541;
-            --btn-black: #0b0c10;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jan Ira Bantilan | Virtual Assistant</title>
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: var(--bg-dark);
-            margin: 0;
-            padding: 40px 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            min-height: 100vh;
-        }
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-        /* Header Layout */
-        header {
-            text-align: center;
-            width: 100%;
-            max-width: 650px;
-            margin-bottom: 30px;
-        }
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
 
-        header h1 {
-            color: #ffffff;
-            font-size: 2.2rem;
-            font-weight: 700;
-            margin: 0 0 15px 0;
-            letter-spacing: -0.5px;
-        }
+html{
+    scroll-behavior:smooth;
+}
 
-        header .line {
-            width: 100%;
-            height: 1px;
-            background-color: rgba(255, 255, 255, 0.15);
-        }
+body{
+    background:#0f172a;
+    color:white;
+    line-height:1.6;
+}
 
-        /* Main Card Container */
-        .main-card {
-            background-color: var(--card-light);
-            border-radius: 12px; /* Rounded corners */
-            width: 100%;
-            max-width: 650px;
-            padding: 40px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-            text-align: center;
-        }
+nav{
+    position:fixed;
+    width:100%;
+    top:0;
+    background:#111827;
+    padding:20px 10%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    z-index:1000;
+}
 
-        /* Text Layout with Bold Emphasis */
-        .intro-text {
-            color: var(--text-dark);
-            font-size: 1.15rem;
-            line-height: 1.6;
-            margin-bottom: 35px;
-            text-align: left;
-        }
+.logo{
+    color:#38bdf8;
+    font-size:24px;
+    font-weight:700;
+}
 
-        /* Image Carousel Placeholder Layout */
-        .carousel-container {
-            width: 100%;
-            max-width: 480px;
-            margin: 0 auto 30px auto;
-        }
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:25px;
+}
 
-        .carousel-box {
-            width: 100%;
-            aspect-ratio: 16 / 10; /* Clean rectangular shape */
-            background-color: #e2e8f0;
-            border: 2px dashed #cbd5e1;
-            border-radius: 8px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            color: #64748b;
-            font-size: 0.95rem;
-            font-weight: 500;
-            padding: 20px;
-        }
+nav a{
+    color:white;
+    text-decoration:none;
+}
 
-        .carousel-caption {
-            font-style: italic;
-            color: #475569;
-            font-size: 0.9rem;
-            margin-top: 12px;
-            margin-bottom: 8px;
-        }
+nav a:hover{
+    color:#38bdf8;
+}
 
-        .carousel-dots {
-            display: flex;
-            justify-content: center;
-            gap: 6px;
-        }
+section{
+    padding:100px 10%;
+}
 
-        .dot {
-            width: 8px;
-            height: 8px;
-            background-color: #cbd5e1;
-            border-radius: 50%;
-        }
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+}
 
-        .dot.active {
-            background-color: #475569;
-        }
+.hero h1{
+    font-size:60px;
+    margin-bottom:10px;
+}
 
-        /* Call To Action Button */
-        .cta-button {
-            display: inline-block;
-            background-color: var(--btn-black);
-            color: #ffffff;
-            text-decoration: none;
-            padding: 14px 32px;
-            font-size: 1rem;
-            font-weight: 600;
-            border-radius: 30px; /* Rounded button */
-            transition: background-color 0.2s ease, transform 0.1s ease;
-            margin-top: 10px;
-        }
+.hero h2{
+    color:#38bdf8;
+    margin-bottom:20px;
+}
 
-        .cta-button:hover {
-            background-color: #222222;
-            transform: translateY(-1px);
-        }
-    </style>
+.hero p{
+    max-width:700px;
+    margin-bottom:30px;
+}
+
+.btn{
+    display:inline-block;
+    background:#38bdf8;
+    color:#111827;
+    padding:12px 25px;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:600;
+}
+
+.title{
+    color:#38bdf8;
+    margin-bottom:30px;
+    font-size:40px;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:#1e293b;
+    padding:25px;
+    border-radius:15px;
+}
+
+.metric{
+    text-align:center;
+}
+
+.metric h3{
+    font-size:40px;
+    color:#38bdf8;
+}
+
+.timeline{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+.timeline-item{
+    background:#1e293b;
+    padding:25px;
+    border-left:5px solid #38bdf8;
+    border-radius:10px;
+}
+
+.skills{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:15px;
+}
+
+.skill{
+    background:#1e293b;
+    padding:15px;
+    border-radius:10px;
+    text-align:center;
+}
+
+.contact{
+    background:#1e293b;
+    padding:30px;
+    border-radius:15px;
+}
+
+footer{
+    text-align:center;
+    padding:30px;
+    background:#111827;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+    font-size:38px;
+}
+
+nav ul{
+    display:none;
+}
+
+}
+</style>
 </head>
+
 <body>
 
-    <!-- Centered Header -->
-    <header>
-        <h1>Jan Ira Bantilan</h1>
-        <div class="line"></div>
-    </header>
+<nav>
+    <div class="logo">JAN IRA BANTILAN</div>
 
-    <!-- Centered Container Card -->
-    <div class="main-card">
-        
-        <!-- Text with Bold Structural Layout -->
-        <p class="intro-text">
-            I am a <strong>highly proactive and organized Virtual Assistant</strong> with a strong sense of responsibility and exceptional interpersonal skills. Known for my ability to <strong>thrive in a collaborative work environment, make swift decisions, and effectively manage high-pressure situations.</strong> I am eager to excel in a challenging role while continuously expanding my skill set[cite: 1].
-        </p>
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#achievements">Achievements</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
 
-        <!-- Centered Image Carousel Component Placeholder -->
-        <div class="carousel-container">
-            <div class="carousel-box">
-                📷 [Your Photo Goes Here]
-                <span style="font-size: 0.8rem; margin-top:5px; color:#94a3b8;">(See instructions below to link your actual image file!)</span>
-            </div>
-            <div class="carousel-caption">
-                "Me after hosting a 3,000 person tech event in 2024"
-            </div>
-            <div class="carousel-dots">
-                <span class="dot active"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-            </div>
-        </div>
+<section class="hero">
 
-        <!-- Call To Action -->
-        <a href="story.html" class="cta-button">Read my story</a>
+<div>
 
-    </div>
+<h1>Jan Ira Bantilan</h1>
+
+<h2>Virtual Assistant | Customer Support Specialist | Appointment Setter</h2>
+
+<p>
+With over 10 years of experience in customer service, sales, lead generation,
+appointment setting, CRM management, and administrative support,
+I help businesses streamline operations, improve customer experiences,
+and drive growth.
+</p>
+
+<a href="#contact" class="btn">Hire Me</a>
+
+</div>
+
+</section>
+
+<section id="about">
+
+<h2 class="title">About Me</h2>
+
+<p>
+I am a highly proactive and organized Virtual Assistant with extensive experience
+supporting international clients across healthcare, telecommunications,
+real estate, publishing, and service industries.
+
+I specialize in customer service, lead generation, appointment scheduling,
+sales support, CRM management, and administrative assistance.
+
+My ability to adapt quickly, communicate effectively, and stay organized
+allows me to consistently deliver outstanding results.
+</p>
+
+</section>
+
+<section id="achievements">
+
+<h2 class="title">Career Highlights</h2>
+
+<div class="cards">
+
+<div class="card metric">
+<h3>10+</h3>
+<p>Years Experience</p>
+</div>
+
+<div class="card metric">
+<h3>50K+</h3>
+<p>Customer Interactions</p>
+</div>
+
+<div class="card metric">
+<h3>1000+</h3>
+<p>Qualified Leads</p>
+</div>
+
+<div class="card metric">
+<h3>95%</h3>
+<p>Customer Satisfaction</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="skills">
+
+<h2 class="title">Skills & Expertise</h2>
+
+<div class="skills">
+
+<div class="skill">Customer Service</div>
+<div class="skill">Appointment Setting</div>
+<div class="skill">Lead Generation</div>
+<div class="skill">Cold Calling</div>
+<div class="skill">CRM Management</div>
+<div class="skill">Email Management</div>
+<div class="skill">Calendar Management</div>
+<div class="skill">Sales Support</div>
+<div class="skill">Technical Support</div>
+<div class="skill">Benefits Verification</div>
+<div class="skill">Claims Processing</div>
+<div class="skill">Data Entry</div>
+<div class="skill">Canva</div>
+<div class="skill">Google Workspace</div>
+<div class="skill">Microsoft Office</div>
+
+</div>
+
+</section>
+
+<section id="experience">
+
+<h2 class="title">Professional Experience</h2>
+
+<div class="timeline">
+
+<div class="timeline-item">
+<h3>Virtual Assistant</h3>
+<p>June 2025 – December 2025</p>
+
+<ul>
+<li>Managed dog grooming appointment scheduling.</li>
+<li>Optimized booking logistics and routes.</li>
+<li>Handled customer inquiries and support.</li>
+</ul>
+</div>
+
+<div class="timeline-item">
+<h3>Real Estate Virtual Assistant</h3>
+<p>December 2021 – June 2025</p>
+
+<ul>
+<li>Conducted outbound prospecting and lead generation.</li>
+<li>Qualified homeowner leads.</li>
+<li>Maintained CRM databases.</li>
+<li>Supported realtor sales pipeline growth.</li>
+</ul>
+</div>
+
+<div class="timeline-item">
+<h3>Customer Service & Sales Specialist</h3>
+<p>November 2014 – November 2020</p>
+
+<ul>
+<li>Customer Service Representative.</li>
+<li>NBN Sales Advisor.</li>
+<li>Inbound Sales Consultant.</li>
+<li>Outbound B2B Sales Specialist.</li>
+<li>Customer Experience Analyst.</li>
+</ul>
+</div>
+
+<div class="timeline-item">
+<h3>Healthcare Claims & Benefits Specialist</h3>
+<p>November 2013 – October 2014</p>
+
+<ul>
+<li>Verified benefits and eligibility.</li>
+<li>Handled claims inquiries.</li>
+<li>Provided member support.</li>
+<li>Maintained HIPAA compliance.</li>
+</ul>
+</div>
+
+<div class="timeline-item">
+<h3>Publishing Sales Representative</h3>
+<p>January 2010 – December 2011</p>
+
+<ul>
+<li>Qualified prospective authors.</li>
+<li>Conducted outbound sales calls.</li>
+<li>Presented publishing services.</li>
+</ul>
+</div>
+
+</div>
+
+</section>
+
+<section id="contact">
+
+<h2 class="title">Contact Me</h2>
+
+<div class="contact">
+
+<p><strong>Email:</strong> janirabantilan@gmail.com</p>
+
+<p><strong>Phone:</strong> +63 975 557 2157</p>
+
+<p><strong>Location:</strong> Dipolog City, Philippines</p>
+
+<br>
+
+<p>
+Available for:
+</p>
+
+<ul>
+<li>Virtual Assistant</li>
+<li>Customer Support</li>
+<li>Appointment Setting</li>
+<li>Lead Generation</li>
+<li>Administrative Support</li>
+</ul>
+
+</div>
+
+</section>
+
+<footer>
+© 2026 Jan Ira Bantilan | Virtual Assistant Portfolio
+</footer>
 
 </body>
 </html>
