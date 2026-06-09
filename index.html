@@ -3,371 +3,171 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jan Ira Bantilan | Portfolio</title>
+    <title>Jan Ira Bantilan | Home</title>
     <style>
-        /* Exact Styling Match for Gary Sheng's Portfolio */
         :root {
-            --bg-color: #ffffff;
-            --text-dark: #000000;
-            --text-muted: #555555;
-            --border-color: #000000;
-            --tag-bg: #000000;
-        }
-
-        * {
-            box-sizing: border-box;
+            --bg-dark: #0a1128; /* Solid dark navy background */
+            --card-light: #f4f5f7; /* Light gray rectangular card */
+            --text-dark: #1c2541;
+            --btn-black: #0b0c10;
         }
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-dark);
+            background-color: var(--bg-dark);
             margin: 0;
-            padding: 0;
-            line-height: 1.6;
-        }
-
-        /* Two-Column Grid Layout */
-        .container {
-            display: grid;
-            grid-template-columns: 340px 1fr;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             min-height: 100vh;
         }
 
-        /* Left Sidebar - Gary style */
-        .sidebar {
-            padding: 80px 45px;
-            border-right: 1px solid #eaeaea;
-            background-color: #ffffff;
-            position: sticky;
-            top: 0;
-            height: 100vh;
+        /* Header Layout */
+        header {
+            text-align: center;
+            width: 100%;
+            max-width: 650px;
+            margin-bottom: 30px;
         }
 
-        .profile-name {
-            font-family: Georgia, serif;
-            font-size: 2.4rem;
+        header h1 {
+            color: #ffffff;
+            font-size: 2.2rem;
             font-weight: 700;
-            line-height: 1.1;
-            margin-bottom: 8px;
+            margin: 0 0 15px 0;
             letter-spacing: -0.5px;
         }
 
-        .profile-title {
-            font-size: 0.95rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: var(--text-muted);
-            font-weight: 600;
-            margin-bottom: 40px;
+        header .line {
+            width: 100%;
+            height: 1px;
+            background-color: rgba(255, 255, 255, 0.15);
         }
 
-        .contact-info {
-            font-size: 0.95rem;
+        /* Main Card Container */
+        .main-card {
+            background-color: var(--card-light);
+            border-radius: 12px; /* Rounded corners */
+            width: 100%;
+            max-width: 650px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+
+        /* Text Layout with Bold Emphasis */
+        .intro-text {
             color: var(--text-dark);
-            line-height: 1.8;
+            font-size: 1.15rem;
+            line-height: 1.6;
+            margin-bottom: 35px;
+            text-align: left;
         }
 
-        .contact-info p {
-            margin: 12px 0;
+        /* Image Carousel Placeholder Layout */
+        .carousel-container {
+            width: 100%;
+            max-width: 480px;
+            margin: 0 auto 30px auto;
         }
 
-        .contact-info a {
-            color: var(--text-dark);
-            text-decoration: none;
-            border-bottom: 1px solid #111111;
-        }
-
-        .contact-info a:hover {
-            color: #555555;
-            border-bottom-color: #555555;
-        }
-
-        /* Right Content Area */
-        .main-content {
-            padding: 80px 80px 80px 100px;
-            max-width: 960px;
-        }
-
-        /* Gary's Distinct Bold Intro Text */
-        .intro-paragraph {
-            font-size: 1.45rem;
-            line-height: 1.5;
-            font-weight: 400;
-            color: var(--text-dark);
-            margin-bottom: 60px;
-            letter-spacing: -0.2px;
-        }
-
-        /* Section Headings */
-        section {
-            margin-bottom: 60px;
-        }
-
-        h2 {
-            font-family: Georgia, serif;
-            font-size: 1.3rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            border-bottom: 2px solid var(--border-color);
-            padding-bottom: 6px;
-            margin-bottom: 30px;
-            margin-top: 0;
-        }
-
-        /* Experience Item Block */
-        .exp-item {
-            margin-bottom: 40px;
-        }
-
-        .exp-header {
+        .carousel-box {
+            width: 100%;
+            aspect-ratio: 16 / 10; /* Clean rectangular shape */
+            background-color: #e2e8f0;
+            border: 2px dashed #cbd5e1;
+            border-radius: 8px;
             display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            margin-bottom: 4px;
-        }
-
-        .exp-role {
-            font-size: 1.2rem;
-            font-weight: 700;
-            color: var(--text-dark);
-        }
-
-        .exp-date {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #64748b;
             font-size: 0.95rem;
-            color: var(--text-muted);
             font-weight: 500;
+            padding: 20px;
         }
 
-        .exp-company {
-            font-size: 1.05rem;
-            font-weight: 600;
-            color: var(--text-muted);
-            margin-bottom: 12px;
-        }
-
-        ul {
-            margin: 0;
-            padding-left: 20px;
-            color: #222222;
-        }
-
-        li {
-            margin-bottom: 10px;
-            font-size: 1rem;
-        }
-
-        /* Gary Sheng's Minimalist Dark Square Skill Tags */
-        .tags-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        .tag {
-            background-color: var(--tag-bg);
-            color: #ffffff;
-            padding: 8px 14px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            letter-spacing: 0.8px;
-            text-transform: uppercase;
-            border-radius: 0px; /* Square edges just like Gary's site */
-        }
-
-        footer {
-            margin-top: 80px;
-            border-top: 1px solid #eaeaea;
-            padding-top: 20px;
+        .carousel-caption {
+            font-style: italic;
+            color: #475569;
             font-size: 0.9rem;
-            color: var(--text-muted);
+            margin-top: 12px;
+            margin-bottom: 8px;
         }
 
-        /* Mobile View Changes */
-        @media (max-width: 768px) {
-            .container {
-                grid-template-columns: 1fr;
-            }
-            .sidebar {
-                position: relative;
-                height: auto;
-                border-right: none;
-                border-bottom: 1px solid #eaeaea;
-                padding: 50px 30px;
-            }
-            .main-content {
-                padding: 50px 30px;
-            }
-            .exp-header {
-                flex-direction: column;
-            }
-            .exp-date {
-                margin-top: 4px;
-                margin-bottom: 6px;
-            }
+        .carousel-dots {
+            display: flex;
+            justify-content: center;
+            gap: 6px;
+        }
+
+        .dot {
+            width: 8px;
+            height: 8px;
+            background-color: #cbd5e1;
+            border-radius: 50%;
+        }
+
+        .dot.active {
+            background-color: #475569;
+        }
+
+        /* Call To Action Button */
+        .cta-button {
+            display: inline-block;
+            background-color: var(--btn-black);
+            color: #ffffff;
+            text-decoration: none;
+            padding: 14px 32px;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 30px; /* Rounded button */
+            transition: background-color 0.2s ease, transform 0.1s ease;
+            margin-top: 10px;
+        }
+
+        .cta-button:hover {
+            background-color: #222222;
+            transform: translateY(-1px);
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
+    <!-- Centered Header -->
+    <header>
+        <h1>Jan Ira Bantilan</h1>
+        <div class="line"></div>
+    </header>
+
+    <!-- Centered Container Card -->
+    <div class="main-card">
         
-        <!-- Left Column: Sticky Profile Bio Info -->
-        <aside class="sidebar">
-            <div class="profile-name">Jan Ira Bantilan</div>
-            <div class="profile-title">Virtual Assistant</div>
-            
-            <div class="contact-info">
-                <p>📍 Dipolog City, Philippines</p>
-                <p>✉️ <a href="mailto:janirabantilan@gmail.com">janirabantilan@gmail.com</a></p>
-                <p>📱 <a href="tel:0952502459">0952502459</a></p>
+        <!-- Text with Bold Structural Layout -->
+        <p class="intro-text">
+            I am a <strong>highly proactive and organized Virtual Assistant</strong> with a strong sense of responsibility and exceptional interpersonal skills. Known for my ability to <strong>thrive in a collaborative work environment, make swift decisions, and effectively manage high-pressure situations.</strong> I am eager to excel in a challenging role while continuously expanding my skill set[cite: 1].
+        </p>
+
+        <!-- Centered Image Carousel Component Placeholder -->
+        <div class="carousel-container">
+            <div class="carousel-box">
+                📷 [Your Photo Goes Here]
+                <span style="font-size: 0.8rem; margin-top:5px; color:#94a3b8;">(See instructions below to link your actual image file!)</span>
             </div>
-        </aside>
+            <div class="carousel-caption">
+                "Me after hosting a 3,000 person tech event in 2024"
+            </div>
+            <div class="carousel-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </div>
 
-        <!-- Right Column: Scrolling Portfolio Details -->
-        <main class="main-content">
-            
-            <p class="intro-paragraph">
-                I am a highly proactive and organized Virtual Assistant with a strong sense of responsibility and exceptional interpersonal skills. Known for my ability to thrive in a collaborative work environment, make swift decisions, and effectively manage high-pressure situations. I am eager to excel in a challenging role while continuously expanding my skill set[cite: 1].
-            </p>
+        <!-- Call To Action -->
+        <a href="story.html" class="cta-button">Read my story</a>
 
-            <!-- Section: Work Experience -->
-            <section>
-                <h2>Experience</h2>
-
-                <div class="exp-item">
-                    <div class="exp-header">
-                        <span class="exp-role">Virtual Assistant / Real Estate ISA</span>
-                        <span class="exp-date">Dec 2021 - Jun 2025</span>
-                    </div>
-                    <div class="exp-company">Freelance / Real Estate Support</div>
-                    <ul>
-                        <li>Conducted outbound cold calls to homeowners across targeted regions to identify potential sellers and generate qualified leads for a real estate agent[cite: 1].</li>
-                        <li>Built and maintained a consistent sales pipeline by engaging prospects, handling objections, and securing interest for follow-up[cite: 1].</li>
-                        <li>Researched and gathered lead information from online platforms such as Zillow, Realtor.com, Redfin, and property databases to identify new opportunities[cite: 1].</li>
-                        <li>Accurately logged prospect data, property details, and conversation outcomes into CRM systems for streamlined follow-up and reporting[cite: 1].</li>
-                        <li>Supported the realtor in optimizing lead conversion by providing well-organized, pre-qualified prospects[cite: 1].</li>
-                    </ul>
-                </div>
-
-                <div class="exp-item">
-                    <div class="exp-header">
-                        <span class="exp-role">Customer Service Representative & Specialist roles</span>
-                        <span class="exp-date">Nov 2014 - Nov 2020</span>
-                    </div>
-                    <div class="exp-company">Telstra International Philippines Inc.</div>
-                    <ul>
-                        <li>Provided multi-channel support, resolving inquiries and technical issues with a customer-first approach and consistently high satisfaction ratings[cite: 1].</li>
-                        <li>Assisted residential and business clients in transitioning to the NBN network, ensuring a smooth migration and clear understanding of service options[cite: 1].</li>
-                        <li>Recommended tailored upgrades and bundles based on client needs, boosting revenue and customer retention through value-based selling[cite: 1].</li>
-                        <li>Engaged small to mid-sized businesses via cold/warm calls, promoting Telstra services and converting leads into long-term customers[cite: 1].</li>
-                        <li>Handled product inquiries, provided tailored recommendations, and closed sales while aligning offers with customer needs and budgets[cite: 1].</li>
-                        <li>Analyzed call data to identify service pain points, contributing to improved scripts and workflows that enhanced customer and agent experience[cite: 1].</li>
-                    </ul>
-                </div>
-
-                <div class="exp-item">
-                    <div class="exp-header">
-                        <span class="exp-role">Outbound Sales Representative</span>
-                        <span class="exp-date">Nov 2013 - Oct 2014</span>
-                    </div>
-                    <div class="exp-company">Authors Solutions (Xlibris)</div>
-                    <ul>
-                        <li>Conducted high-volume outbound cold calls to prospective authors, initiating conversations about their writing goals and gauging their readiness to publish[cite: 1].</li>
-                        <li>Identified leads at various stages of the writing process and qualified them based on interest, manuscript status, and publishing intent[cite: 1].</li>
-                        <li>Educated authors on available publishing packages, services, and timelines to build interest and trust in Xlibris as their publishing partner[cite: 1].</li>
-                    </ul>
-                </div>
-
-                <div class="exp-item">
-                    <div class="exp-header">
-                        <span class="exp-role">Claims & Benefits Specialist / Customer Service</span>
-                        <span class="exp-date">Jan 2010 - Dec 2011</span>
-                    </div>
-                    <div class="exp-company">TeleTech - Anthem Blue Cross Blue Shield</div>
-                    <ul>
-                        <li>Handled inbound calls from healthcare providers and members, providing clear and accurate information about benefits eligibility, coverage details, and plan guidelines[cite: 1].</li>
-                        <li>Verified member eligibility and benefits in real-time to support medical decision-making and claims processing[cite: 1].</li>
-                        <li>Researched and communicated the status of medical and hospital claims, including approvals, denials, and required documentation[cite: 1].</li>
-                        <li>Ensured compliance with HIPAA regulations and maintained confidentiality in all member interactions[cite: 1].</li>
-                        <li>Resolved inquiries efficiently while maintaining empathy and professionalism, contributing to positive member satisfaction scores[cite: 1].</li>
-                    </ul>
-                </div>
-            </section>
-
-            <!-- Section: Skills -->
-            <section>
-                <h2>Skills</h2>
-                <div class="tags-grid">
-                    <div class="tag">Customer Service</div>
-                    <div class="tag">Lead Generation</div>
-                    <div class="tag">Email Management</div>
-                    <div class="tag">Training</div>
-                    <div class="tag">Claims & Benefits</div>
-                    <div class="tag">Photo & Video Editing</div>
-                    <div class="tag">Social Media Management</div>
-                </div>
-            </section>
-
-            <!-- Section: Tools -->
-            <section>
-                <h2>Tools</h2>
-                <div class="tags-grid">
-                    <div class="tag">Canva</div>
-                    <div class="tag">Zoom</div>
-                    <div class="tag">Trello</div>
-                    <div class="tag">Google Drive</div>
-                    <div class="tag">Google Docs</div>
-                    <div class="tag">Google Sheets</div>
-                    <div class="tag">MS Word</div>
-                    <div class="tag">MS Excel</div>
-                    <div class="tag">MS PowerPoint</div>
-                    <div class="tag">OneDrive</div>
-                    <div class="tag">Outlook</div>
-                    <div class="tag">Gmail</div>
-                </div>
-            </section>
-
-            <!-- Section: Education -->
-            <section>
-                <h2>Education</h2>
-                <div class="exp-item">
-                    <div class="exp-header">
-                        <span class="exp-role">Bachelor of Science in Nursing</span>
-                        <span class="exp-date">2006 - 2008</span>
-                    </div>
-                    <div class="exp-company">Andres Bonifacio University</div>
-                </div>
-                <div class="exp-item">
-                    <div class="exp-header">
-                        <span class="exp-role">Undergraduate Studies (Graduated with Honors)</span>
-                        <span class="exp-date">2002 - 2006</span>
-                    </div>
-                    <div class="exp-company">Jose Rizal State University</div>
-                </div>
-            </section>
-
-            <!-- Section: Interests -->
-            <section>
-                <h2>Interests</h2>
-                <div class="tags-grid">
-                    <div class="tag">Watching movies</div>
-                    <div class="tag">Listening to music</div>
-                    <div class="tag">Biking</div>
-                    <div class="tag">Hiking</div>
-                    <div class="tag">Traveling</div>
-                    <div class="tag">Pet-lover</div>
-                    <div class="tag">Tech Savvy</div>
-                    <div class="tag">Photography</div>
-                </div>
-            </section>
-
-            <footer>
-                <p>&copy; 2026 Jan Ira Bantilan.</p>
-            </footer>
-
-        </main>
     </div>
 
 </body>
